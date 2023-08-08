@@ -1,0 +1,3 @@
+<input [(ngModel)]="query" (keyup.enter)="searchArtists()" placeholder="Search artists">
+<button (click)="searchArtists()">Search</button>
+<app-artist-list [artists]="artists"></app-artist-list> <!-- Added to display the artists -->
