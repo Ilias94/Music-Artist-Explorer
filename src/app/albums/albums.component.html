@@ -1,0 +1,8 @@
+<h2>{{ album?.name }} by {{ album?.artist }}</h2>
+<p>Release Date: {{ album?.releasedate }}</p>
+<img [src]="album?.image[2]['#text']" alt="Album Cover" />
+<ul>
+  <li *ngFor="let track of album?.tracks?.track">
+    <a [href]="track.url" target="_blank">{{ track.name }}</a> ({{ track.duration }} seconds)
+  </li>
+</ul>

@@ -10,8 +10,11 @@ import { ArtistListComponent } from './artist-list/artist-list.component';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 import { LastfmService } from './lastfm.service';
 import { TopArtistsComponent } from './top-artists/top-artists.component';
-import { TopAlbumsComponent } from './top-albums/top-albums.component';
+
 import { TopTracksComponent } from './top-tracks/top-tracks.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { RouterModule } from '@angular/router';
+import { ArtistAlbumsComponent } from './artist-albums/artist-albums.component';
 
 
 @NgModule({
@@ -21,14 +24,16 @@ import { TopTracksComponent } from './top-tracks/top-tracks.component';
     ArtistListComponent,
     ArtistDetailComponent,
     TopArtistsComponent,
-    TopAlbumsComponent,
-    TopTracksComponent
+    TopTracksComponent,
+    AlbumsComponent,
+    ArtistAlbumsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [LastfmService],
   bootstrap: [AppComponent]

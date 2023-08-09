@@ -1,1 +1,10 @@
-<p>top-tracks works!</p>
+<div class="container">
+    <h1>Top 10 Tracks</h1>
+    <div *ngFor="let track of tracks; let i = index">
+      <div class="track-card">
+        <h4>{{ i + 1 }}. {{ track.name }}</h4>
+        <p>Artist: {{ track.artist.name }}</p>
+        <p>Listeners: {{ track.listeners }}</p>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<h2>Albums by {{ artist }}</h2>
+<ul>
+  <li *ngFor="let album of albums">
+    <a [routerLink]="['/albums', artist, album.name]">{{ album.name }}</a>
+  </li>
+</ul>

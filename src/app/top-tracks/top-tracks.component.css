@@ -1,0 +1,16 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .track-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .track-card img {
+    max-width: 100%;
+  }
+  

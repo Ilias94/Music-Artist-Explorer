@@ -1,16 +1,13 @@
-<div class="container">
-  <header>
-    <h1>Music Artist Explorer</h1>
-  </header>
-
-  <app-search></app-search>
-
-  <!-- This is where you would include other components such as artist details, album list, etc. -->
-  <!-- For example, you might have a component to display the list of artists:
-  <app-artist-list></app-artist-list>
-  -->
-
-  <footer>
-    <p>Powered by Last.fm</p>
-  </footer>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <nav class="navbar">
+    <a [routerLink]="['/top-artists']">Top Artists</a>
+    <a [routerLink]="['/top-tracks']">Top Tracks</a>
+    <a [routerLink]="['/search']">Search</a>
+  </nav>
+  <router-outlet></router-outlet>
+</body>
+</html>

@@ -7,13 +7,13 @@ import { LastfmService } from '../lastfm.service';
 })
 export class SearchComponent {
   query: string = '';
-  artists: any[] = []; // Added to store the artists
+  artists: any[] = []; 
 
   constructor(private lastfmService: LastfmService) {}
 
   searchArtists() {
     this.lastfmService.searchArtists(this.query).subscribe((data) => {
-      this.artists = data.results.artistmatches.artist; // Update the artists array
+      this.artists = data.results.artistmatches.artist; 
     });
   }
 }

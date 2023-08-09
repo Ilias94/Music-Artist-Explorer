@@ -1,68 +1,111 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    color: #333;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.navbar {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.artist-card {
+  background: linear-gradient(to right, #f0f0f0, #ddd);
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  transition: background-color 0.3s ease;
+}
+
+.artist-card:hover {
+  background-color: #f0f0f0;
+}
+
+.artist-icon img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.artist-name {
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.artist-details,
+.artist-genre {
+  color: #777;
+  font-size: 14px;
+}
+
+.artist-tags {
+  margin: 5px 0;
+}
+
+.tag {
+  background-color: #eee;
+  padding: 2px 5px;
+  margin-right: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.artist-description {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+.artist-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.artist-card a:hover {
+  text-decoration: underline;
+}
+
+.artist-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .artist-card {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 15px;
+
+  .artist-card h3,
+  .artist-card p {
+    flex-basis: 30%;
   }
-  
-  header {
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 0.8em;
-    color: #999;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Add styles for the artist list, details, and other components as needed */
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+}
+.artist-rank {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin-right: 10px;
+}
+
