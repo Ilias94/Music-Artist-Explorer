@@ -16,9 +16,9 @@ export class TopArtistsComponent implements OnInit {
   artists: Artist[] = [];
   selectedCategory: string = 'rock';
   currentPage: number = 1;
-  totalPages: number = 0; // Add this property for the total number of pages
+  totalPages: number = 0;
   limit: number = 10;
-  directPage: number | null = null; // Add this property for the page number entered in the input box
+  directPage: number | null = null; 
 
   constructor(private lastfmService: LastfmService, private router: Router,private favoritesService: FavoritesService) {}
 
@@ -45,7 +45,7 @@ export class TopArtistsComponent implements OnInit {
     }
   }
 
-  goToDirectPage() { // Add this method to navigate to the page number entered in the input box
+  goToDirectPage() {
     if (this.directPage !== null && this.directPage >= 1 && this.directPage <= this.totalPages) {
       this.changePage(this.directPage);
     }

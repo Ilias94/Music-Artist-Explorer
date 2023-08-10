@@ -132,13 +132,14 @@ body {
   background: var(--primary-color);
   border: none;
   color: #ffffff;
-  border-radius: 20px; /* Rounded corners */
-  padding: 4px 8px; /* Adjusted padding to make the button smaller */
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-left: 10px; /* Added margin to create space between artist and button */
+  margin-left: 10px;
 }
+
 
 .btn-view-album:hover {
   background: darken(var(--primary-color), 10%);

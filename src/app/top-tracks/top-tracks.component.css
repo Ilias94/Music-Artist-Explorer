@@ -36,3 +36,12 @@
   margin-top: 10px;
 }
 
+.btn-view-album.btn-danger {
+  background-color: #e44d48;
+  color: #d4ab38;
+}
+
+.btn-view-album.btn-danger:hover {
+  background-color: #c43830;
+  color: #ffffff;
+}

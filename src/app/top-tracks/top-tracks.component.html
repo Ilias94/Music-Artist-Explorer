@@ -16,10 +16,10 @@
         <p class="track-details">Artist: <a [href]="trackObj.track.artist.url" target="_blank">{{ trackObj.track.artist.name }}</a></p>
         <p class="track-details">Listeners: {{ trackObj.track.listeners }}</p>
       </div>
-    </div>
-    <div class="favorite-buttons">
-      <button *ngIf="!isFavoriteTrack(trackObj.track)" (click)="addFavoriteTrack(trackObj.track)">Add to Favorites</button>
-      <button *ngIf="isFavoriteTrack(trackObj.track)" (click)="removeFavoriteTrack(trackObj.track)">Remove from Favorites</button>
+      <div class="favorite-buttons">
+        <button *ngIf="!isFavoriteTrack(trackObj.track)" (click)="addFavoriteTrack(trackObj.track)" class="btn btn-view-album">Add to Favorites</button>
+        <button *ngIf="isFavoriteTrack(trackObj.track)" (click)="removeFavoriteTrack(trackObj.track)" class="btn btn-view-album btn-danger">Remove from Favorites</button>
+      </div>
     </div>
   </div>
 </div>
