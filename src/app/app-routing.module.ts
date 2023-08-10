@@ -5,13 +5,15 @@ import { TopTracksComponent } from './top-tracks/top-tracks.component';
 import { SearchComponent } from './search/search.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { ArtistAlbumsComponent } from './artist-albums/artist-albums.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 const routes: Routes = [
   { path: 'top-artists', component: TopArtistsComponent },
   { path: 'top-tracks', component: TopTracksComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'albums/:artist', component: ArtistAlbumsComponent },
-  { path: 'albums/:artist', component: AlbumsComponent },
+  { path: 'artist-albums/:artist', component: ArtistAlbumsComponent },
+  { path: 'albums/:artist/:album', component: AlbumsComponent },
+  { path: 'favourites', component: FavouritesComponent }, 
   { path: '', redirectTo: '/top-artists', pathMatch: 'full' },
 ];
 

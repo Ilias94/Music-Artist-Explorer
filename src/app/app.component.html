@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="navbar">
-    <a [routerLink]="['/top-artists']">Top Artists</a>
-    <a [routerLink]="['/top-tracks']">Top Tracks</a>
-    <a [routerLink]="['/search']">Search</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Music App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/top-artists']">Top Artists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/top-tracks']">Top Tracks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/favourites']">Favourites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/search']">Search</a>
+        </li>
+      </ul>
+    </div>
   </nav>
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </body>
 </html>

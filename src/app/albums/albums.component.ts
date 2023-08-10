@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LastfmService } from '../lastfm.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-albums',
@@ -9,7 +10,7 @@ import { LastfmService } from '../lastfm.service';
 export class AlbumsComponent implements OnInit {
   album: any = null;
 
-  constructor(private route: ActivatedRoute, private lastfmService: LastfmService) {}
+  constructor(private route: ActivatedRoute, private lastfmService: LastfmService, private location: Location) {}
 
   ngOnInit() {
     const artist = this.route.snapshot.paramMap.get('artist');
@@ -19,5 +20,9 @@ export class AlbumsComponent implements OnInit {
         this.album = response.album;
       });
     }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

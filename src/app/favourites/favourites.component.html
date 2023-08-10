@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Favorites</h1>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="viewMode === 'artists'" (click)="viewMode = 'artists'">Favorite Artists</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="viewMode === 'tracks'" (click)="viewMode = 'tracks'">Favorite Tracks</a>
+    </li>
+  </ul>
+
+  <div *ngIf="viewMode === 'artists'">
+    <h2>Favorite Artists</h2>
+    <div *ngFor="let artist of favoritesService.favoriteArtists" class="card mb-3">
+      <div class="card-body">
+        <h4 class="artist-name card-title"><a [href]="artist.url" target="_blank">{{ artist.name }}</a></h4>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="viewMode === 'tracks'">
+    <h2>Favorite Tracks</h2>
+    <div *ngFor="let track of favoriteTracks" class="card mb-3">
+      <div class="card-body">
+        <h4 class="track-name card-title"><a [href]="track.url" target="_blank">{{ track.name }}</a></h4>
+        <p class="track-details">Artist: <a [href]="track.artist.url" target="_blank">{{ track.artist.name }}</a></p>
+        <p class="track-details">Listeners: {{ track.listeners }}</p>
+      </div>
+    </div>
+  </div>
+</div>

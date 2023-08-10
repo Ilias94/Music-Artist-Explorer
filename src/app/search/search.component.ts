@@ -5,15 +5,32 @@ import { LastfmService } from '../lastfm.service';
   selector: 'app-search',
   templateUrl: './search.component.html',
 })
+
 export class SearchComponent {
   query: string = '';
-  artists: any[] = []; 
+  searchType: string = 'artist';
+  artists: any[] = [];
+  tracks: any[] = [];
 
   constructor(private lastfmService: LastfmService) {}
 
+  search() {
+    if (this.searchType === 'artist') {
+      this.searchArtists();
+    } else {
+      this.searchTracks();
+    }
+  }
+
   searchArtists() {
     this.lastfmService.searchArtists(this.query).subscribe((data) => {
-      this.artists = data.results.artistmatches.artist; 
+      this.artists = data.results.artistmatches.artist;
+    });
+  }
+
+  searchTracks() {
+    this.lastfmService.searchTracks(this.query).subscribe((data) => {
+      this.tracks = data.results.trackmatches.track;
     });
   }
 }

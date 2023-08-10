@@ -1,3 +1,10 @@
-<input [(ngModel)]="query" (keyup.enter)="searchArtists()" placeholder="Search artists">
-<button (click)="searchArtists()">Search</button>
-<app-artist-list [artists]="artists"></app-artist-list> <!-- Added to display the artists -->
+<form>
+  <select [(ngModel)]="searchType" name="searchType">
+    <option value="artist">Artists</option>
+    <option value="track">Tracks</option>
+  </select>
+  <input [(ngModel)]="query" name="query" (keyup.enter)="search()" placeholder="Search">
+  <button (click)="search()">Search</button>
+</form>
+<app-artist-list *ngIf="searchType === 'artist'" [artists]="artists"></app-artist-list>
+<app-track-list *ngIf="searchType === 'track'" [tracks]="tracks"></app-track-list>

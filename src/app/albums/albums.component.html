@@ -1,3 +1,5 @@
+<button (click)="goBack()">Go Back</button> <!-- Added back button -->
+
 <h2>{{ album?.name }} by {{ album?.artist }}</h2>
 <p>Release Date: {{ album?.releasedate }}</p>
 <img [src]="album?.image[2]['#text']" alt="Album Cover" />
@@ -6,3 +8,4 @@
     <a [href]="track.url" target="_blank">{{ track.name }}</a> ({{ track.duration }} seconds)
   </li>
 </ul>
+
