@@ -1,12 +1,12 @@
 
 
   .btn-view-album.btn-danger {
-    background-color: #e44d48; /* Red color for the remove button */
-    color: #ffffff; /* White text color for consistency */
+    background-color: #e44d48; 
+    color: #ffffff; 
   }
   
   .btn-view-album.btn-danger:hover {
-    background-color: #c43830; /* Darker red on hover */
-    color: #ffffff; /* White text color on hover */
+    background-color: #c43830;
+    color: #ffffff; 
   }
   
